@@ -336,7 +336,7 @@ base.MemberExpression = function (node, st, c) {
   if (node.computed) c(node.property, st, "Expression");
 };
 base.ExportNamedDeclaration = base.ExportDefaultDeclaration = function (node, st, c) {
-  if (node.declaration) c(node.declaration, st);
+  if (node.declaration) c(node.declaration, st, node.type == "ExportNamedDeclaration" || node.declaration.id ? "Statement" : "Expression");
   if (node.source) c(node.source, st, "Expression");
 };
 base.ExportAllDeclaration = function (node, st, c) {

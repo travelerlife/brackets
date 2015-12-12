@@ -1,9 +1,9 @@
 {
   "name": "acorn",
   "description": "ECMAScript parser",
-  "homepage": "https://github.com/marijnh/acorn",
+  "homepage": "https://github.com/ternjs/acorn",
   "main": "dist/acorn.js",
-  "version": "2.3.1",
+  "version": "2.6.5",
   "engines": {
     "node": ">=0.4.0"
   },
@@ -21,11 +21,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/marijnh/acorn.git"
+    "url": "https://github.com/ternjs/acorn.git"
   },
   "license": "MIT",
   "scripts": {
-    "prepublish": "node bin/build-acorn.js && node bin/without_eval > dist/acorn_csp.js",
+    "prepublish": "node bin/build-acorn.js",
     "test": "node test/run.js"
   },
   "bin": {
